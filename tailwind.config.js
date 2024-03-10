@@ -20,6 +20,8 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
+      primary: "#6A53FF",
+      seconday: "#9B62FF",
       black: {
         500: "#4F5665",
         600: "#0B132A",

@@ -7,17 +7,18 @@ html {
   font-family: "Rubik", sans-serif;
 }
 body {
-  @apply bg-white-500;
+  @apply bg-[#0b0c14];
 }
 p {
-  @apply text-black-500;
+  @apply text-white-300;
 }
 .animation-hover:after {
   background: none repeat scroll 0 0 transparent;
   content: "";
   height: 2px;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  @apply w-0 bg-orange-500 left-1/2 block bottom-0 absolute;
+  font-weight: 600;
+  @apply w-0 left-1/2 block bottom-0 absolute;
 }
 .animation-active:after {
   @apply left-0 w-full;
@@ -60,6 +61,19 @@ li.check:before {
 }
 .slick-dots .slick-active span {
   @apply bg-orange-500 rounded-l-full rounded-r-full w-12;
+}
+
+.bg-ready-start {
+  background-image: url("/assets/bottom.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.bg-head {
+  background-image: url("/assets/bg-head.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 /* purgecss end ignore */
