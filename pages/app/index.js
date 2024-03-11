@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
-import { useMemo } from "react";
-import getScrollAnimation from "../../utils/getScrollAnimation";
-import Wmap from "./../../public/assets/Icon/WM.png";
 import Cloud from "./../../public/assets/Icon/Cloud.svg";
+import Wmap from "./../../public/assets/Icon/WM.png";
 
+import ButtonPrimary from "../../components/misc/ButtonPrimary";
 import Cpuitem from "./../../public/assets/Icon/cpuitem.png";
 import Layout from "./Layout";
-import ButtonPrimary from "../../components/misc/ButtonPrimary";
 
 export default function Home() {
   const listGB = [
@@ -83,8 +81,6 @@ export default function Home() {
     },
   ];
 
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-
   return (
     <>
       <Layout>
@@ -115,7 +111,6 @@ export default function Home() {
                 <motion.div
                   className="rounded-[32px] text-white-300 w-full col-span-1 p-4 border bg-[#00000070] border-[#5E45FF66] flex flex-col gap-5"
                   custom={{ duration: 2 + index }}
-                  variants={scrollAnimation}
                   key={index}
                   whileHover={{
                     scale: 1.01,
