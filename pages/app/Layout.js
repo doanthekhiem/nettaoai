@@ -17,16 +17,19 @@ const Layout = ({ children }) => {
       name: "Live GPU",
       url: "about",
       icon: LiveCpu,
+      iscom: false,
     },
     {
       name: "Leaderboard",
       url: "roadmap",
       icon: LiveCPUAtive,
+      iscom: true,
     },
     {
       name: "Staking",
       url: "stake",
       icon: Staking,
+      iscom: true,
     },
   ];
   const account = getAccount(config);
@@ -55,8 +58,8 @@ const Layout = ({ children }) => {
   }
   return (
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
-      <nav class="bg-white  px-4 py-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
-        <div class="flex flex-wrap justify-between items-center">
+      <nav class="sm:bg-[#0b0c1400] bg-[#0B0C14] px-4 py-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+        <div class="flex  flex-wrap justify-between items-center">
           <LogoVPN className="h-10 w-auto" />
           {account.isConnected ? (
             <button
@@ -100,7 +103,14 @@ const Layout = ({ children }) => {
                   }`}
                 >
                   <el.icon />
-                  <span class="ml-3">{el?.name} </span>
+                  <div class="ml-3 flex gap-2 items-center">
+                    {el?.name}{" "}
+                    {el.iscom && (
+                      <span className="text-[10px] font-thin text-primary">
+                        (comming)
+                      </span>
+                    )}
+                  </div>
                 </a>
               </li>
             ))}

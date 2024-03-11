@@ -96,7 +96,7 @@ export default function Home() {
             <img src={Wmap.src} className="mx-auto overflow-auto" />
           </div>
           <div className="flex text-[14px] text-white-300 font-medium justify-between">
-            <div className="flex gap-1">
+            <div className="flex flex-wrap gap-1">
               {listGB.map((el, index) => (
                 <div
                   key={el}
@@ -110,10 +110,10 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-9">
-            <div className="grid sm:grid-cols-3 justify-between gap-5 w-full">
+            <div className="grid sm:grid-cols-3 grid-cols-1 items-center justify-between gap-5 w-full">
               {GBItems.map((feature, index) => (
                 <motion.div
-                  className="rounded-[32px] text-white-300 col-span-1 p-4 border bg-[#00000070] border-[#5E45FF66] flex flex-col gap-5"
+                  className="rounded-[32px] text-white-300 w-full col-span-1 p-4 border bg-[#00000070] border-[#5E45FF66] flex flex-col gap-5"
                   custom={{ duration: 2 + index }}
                   variants={scrollAnimation}
                   key={index}
