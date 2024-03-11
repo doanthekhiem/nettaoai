@@ -2,6 +2,7 @@
 
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 html {
   font-family: "Rubik", sans-serif;
@@ -84,6 +85,6 @@ li.check:before {
 }
 
 /* purgecss end ignore */
-@tailwind utilities;
+
 /* purgecss start ignore */
 /* purgecss end ignore */
