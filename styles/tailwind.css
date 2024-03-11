@@ -7,7 +7,7 @@ html {
   font-family: "Rubik", sans-serif;
 }
 body {
-  @apply bg-[#0b0c14];
+  @apply bg-[#0B0C14];
 }
 p {
   @apply text-white-300;
@@ -70,7 +70,7 @@ li.check:before {
   background-position-x: center;
 }
 .bg-head {
-  background-image: url("/assets/bg-head.png");
+  background-image: url("/assets/bg-111.png");
   background-size: auto;
   background-repeat: no-repeat;
   background-position-x: center;

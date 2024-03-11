@@ -26,6 +26,8 @@
     "viem": "2.x"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^1.1.2"
+    "@types/react": "18.2.64",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "typescript": "5.4.2"
   }
 }

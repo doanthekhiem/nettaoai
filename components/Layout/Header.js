@@ -57,7 +57,7 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-2 mx-auto flex justify-between py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <LogoVPN className="h-8 w-auto" />
+            <LogoVPN className="h-10 w-auto" />
           </div>
           <ul className="hidden lg:flex gap-6 col-start-4 px-5 col-end-8 text-white-300 bg-[#0000003D] rounded-full items-center">
             {headerLink.map((el, index) => (
