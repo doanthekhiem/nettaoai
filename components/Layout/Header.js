@@ -74,7 +74,7 @@ const Header = () => {
                 className={
                   " py-2  cursor-pointer animation-hover inline-block relative" +
                   (activeLink === el.url
-                    ? " text-primary "
+                    ? " font-semibold "
                     : " text-white hover:text-white a")
                 }
               >

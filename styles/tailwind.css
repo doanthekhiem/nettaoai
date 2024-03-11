@@ -76,6 +76,13 @@ li.check:before {
   background-position-x: center;
 }
 
+.bg-feature {
+  background-image: url("/assets/bg-feature.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
 /* purgecss end ignore */
 @tailwind utilities;
 /* purgecss start ignore */

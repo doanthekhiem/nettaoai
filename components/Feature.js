@@ -47,7 +47,7 @@ const Feature = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="max-w-screen-lg px-5 py-20 mx-auto" id="roadmap">
+    <div className="max-w-screen-lg px-5 bg-feature py-20 mx-auto" id="roadmap">
       <div className="gap-8 flex flex-col justify-center items-center">
         <ScrollAnimationWrapper className="flex max-w-screen-sm w-full justify-end">
           <motion.div
