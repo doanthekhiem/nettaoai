@@ -8,8 +8,11 @@ import ArowRight from "../../public/assets/Icon/ArowRight.svg";
 import { mainnet } from "@wagmi/core/chains";
 import ButtonPrimary from "../misc/ButtonPrimary";
 import { config } from "./../../config";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
   useEffect(() => {
@@ -83,11 +86,13 @@ const Header = () => {
             ))}
           </ul>
           <div>
-            <ButtonPrimary addClass={""} onClick={login}>
-              <div className="flex justify-center items-center gap-2">
-                Get Started <ArowRight />
-              </div>
-            </ButtonPrimary>
+            <Link href={"/app"}>
+              <ButtonPrimary>
+                <div className="flex justify-center items-center gap-2">
+                  Get Started <ArowRight />
+                </div>
+              </ButtonPrimary>
+            </Link>
           </div>
         </nav>
       </header>

@@ -6,6 +6,7 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import ButtonOutline from "./misc/ButtonOutline.";
 import ArowRight from "../public/assets/Icon/ArowRight.svg";
+import Link from "next/link";
 
 const abouts = [
   {
@@ -56,11 +57,13 @@ const ReadyStart = () => {
               NetTAO. Seamlessly access computational power, earn rewards, and
               contribute to a decentralized ecosystem.
             </p>
-            <ButtonOutline className={"border-2 bg-[#FFFFFF1A]"}>
-              <div className="flex justify-center items-center gap-2">
-                Get Started <ArowRight />
-              </div>
-            </ButtonOutline>
+            <Link href={"/app"}>
+              <ButtonOutline className={"border-2 bg-[#FFFFFF1A]"}>
+                <div className="flex justify-center items-center gap-2">
+                  Get Started <ArowRight />
+                </div>
+              </ButtonOutline>
+            </Link>
           </motion.div>
         </ScrollAnimationWrapper>
       </div>
