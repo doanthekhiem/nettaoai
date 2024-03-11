@@ -5,6 +5,7 @@ import AboutIcon from "../public/assets/Icon/features-icon.svg";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import ButtonOutline from "./misc/ButtonOutline.";
+import ArowRight from "../public/assets/Icon/ArowRight.svg";
 
 const abouts = [
   {
@@ -56,7 +57,9 @@ const ReadyStart = () => {
               contribute to a decentralized ecosystem.
             </p>
             <ButtonOutline className={"border-2 bg-[#FFFFFF1A]"}>
-              Launch dApp
+              <div className="flex justify-center items-center gap-2">
+                Get Started <ArowRight />
+              </div>
             </ButtonOutline>
           </motion.div>
         </ScrollAnimationWrapper>

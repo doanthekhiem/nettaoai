@@ -4,7 +4,7 @@ import { injected } from "@wagmi/connectors";
 import { connect } from "@wagmi/core";
 import { Link as LinkScroll } from "react-scroll";
 import LogoVPN from "../../public/assets/logo-full.svg";
-
+import ArowRight from "../../public/assets/Icon/ArowRight.svg";
 import { mainnet } from "@wagmi/core/chains";
 import ButtonPrimary from "../misc/ButtonPrimary";
 import { config } from "./../../config";
@@ -84,7 +84,9 @@ const Header = () => {
           </ul>
           <div>
             <ButtonPrimary addClass={""} onClick={login}>
-              Get Started
+              <div className="flex justify-center items-center gap-2">
+                Get Started <ArowRight />
+              </div>
             </ButtonPrimary>
           </div>
         </nav>

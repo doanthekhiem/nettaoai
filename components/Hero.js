@@ -1,11 +1,10 @@
-import React, { useMemo } from "react";
-import Image from "next/image";
-import ButtonPrimary from "./misc/ButtonPrimary";
 import { motion } from "framer-motion";
+import React, { useMemo } from "react";
+import ArowRight from "../public/assets/Icon/ArowRight.svg";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
-import ButtonSecondaryShadow from "./misc/ButtonSecondaryShadow";
 import ButtonOutline from "./misc/ButtonOutline.";
+import ButtonSecondaryShadow from "./misc/ButtonSecondaryShadow";
 
 const Hero = ({
   listUser = [
@@ -40,7 +39,10 @@ const Hero = ({
         id="about"
       >
         <ScrollAnimationWrapper>
-          <motion.div className="py-6 sm:pt-[300px] sm:py-16" variants={scrollAnimation}>
+          <motion.div
+            className="py-6 sm:pt-[300px] sm:py-16"
+            variants={scrollAnimation}
+          >
             <div className=" flex flex-col justify-center text-center items-center row-start-2 sm:row-start-1">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-white-300 leading-normal">
                 AI Infrastructure Powered By Blockchain
@@ -53,7 +55,12 @@ const Hero = ({
               </p>
               <div className="flex gap-6">
                 <ButtonSecondaryShadow>NetCloudBot</ButtonSecondaryShadow>
-                <ButtonOutline>Buy $TAO</ButtonOutline>
+                <ButtonOutline>
+                  <div className="flex justify-center items-center gap-2">
+                    Buy $TAO
+                    <ArowRight />
+                  </div>
+                </ButtonOutline>
               </div>
             </div>
           </motion.div>
