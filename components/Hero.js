@@ -35,14 +35,11 @@ const Hero = ({
   return (
     <div className="bg-head">
       <div
-        className="max-w-screen-md pt-10 sm:pt-[80px] px-8 xl:px-16 mx-auto"
+        className="max-w-screen-md sm:pt-[300px] pt-10  px-8 xl:px-16 mx-auto"
         id="about"
       >
         <ScrollAnimationWrapper>
-          <motion.div
-            className="py-6 sm:pt-[300px] sm:py-16"
-            variants={scrollAnimation}
-          >
+          <motion.div className="py-6 sm:py-16" variants={scrollAnimation}>
             <div className=" flex flex-col justify-center text-center items-center row-start-2 sm:row-start-1">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-white-300 leading-normal">
                 AI Infrastructure Powered By Blockchain
