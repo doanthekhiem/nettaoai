@@ -11,6 +11,7 @@ import { config } from "./../../config";
 
 const HeaderApp = () => {
   const account = useAccount();
+  console.log(account);
 
   const login = async () => {
     try {
@@ -38,11 +39,9 @@ const HeaderApp = () => {
     <nav class="px-4 py-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
       <div class="flex  flex-wrap justify-between items-center">
         <LogoVPN className="h-10 w-auto" />
-        {account.isConnected ? (
+        {account.address ? (
           <button
-            onClick={() => {
-              logout();
-            }}
+            onClick={logout}
             className={
               "font-medium flex items-center gap-2 text-[14px] tracking-wide py-[8px] px-4 sm:px-8 border border-seconday text-white-300  outline-none rounded-l-full rounded-r-full capitalize  hover:text-white-500 transition-all hover:shadow-seconday "
             }
