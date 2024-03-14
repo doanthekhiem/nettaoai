@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-
-import ButtonPrimary from "../../components/misc/ButtonPrimary";
-import Layout from "./Layout";
+import Layout from "../Layout";
+import ButtonPrimary from "../../../components/misc/ButtonPrimary";
 
 export default function Home() {
   return (

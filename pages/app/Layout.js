@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import Discord from "../../public/assets/Icon/discord.svg";
 import Facebook from "../../public/assets/Icon/instar.svg";
@@ -13,10 +14,11 @@ const HeaderApp = dynamic(() => import("../../components/Layout/HeaderApp"), {
 });
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   const asideLink = [
     {
       name: "Live GPU",
-      url: "about",
+      url: "/app",
       icon: LiveCpu,
       iscom: false,
     },
@@ -28,9 +30,8 @@ const Layout = ({ children }) => {
     },
     {
       name: "Staking",
-      url: "stake",
+      url: "/app/staking",
       icon: Staking,
-      iscom: true,
     },
   ];
   return (
@@ -46,26 +47,29 @@ const Layout = ({ children }) => {
       >
         <div class="overflow-y-auto flex flex-col justify-between py-5 px-4 h-full bg-white dark:bg-gray-800">
           <ul class="space-y-2">
-            {asideLink?.map((el, index) => (
-              <li key={index}>
-                <a
-                  href="#"
-                  class={`flex border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
-                    index == 0 && "bg-[#2D285E] text-primary"
-                  }`}
-                >
-                  <el.icon />
-                  <div class="ml-3 flex gap-2 items-center">
-                    {el?.name}{" "}
-                    {el.iscom && (
-                      <span className="text-[10px] font-thin text-primary">
-                        (comming)
-                      </span>
-                    )}
-                  </div>
-                </a>
-              </li>
-            ))}
+            {asideLink?.map((el, index) => {
+              const isActive = el.url == router.pathname;
+              return (
+                <li key={index}>
+                  <a
+                    href={el.url}
+                    class={`flex border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
+                      isActive && "bg-[#2D285E] text-primary"
+                    }`}
+                  >
+                    <el.icon />
+                    <div class="ml-3 flex gap-2 items-center">
+                      {el?.name}{" "}
+                      {el.iscom && (
+                        <span className="text-[10px] font-thin text-primary">
+                          (comming)
+                        </span>
+                      )}
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <div className="flex h-4 gap-3 cursor-pointer">
             <Facebook />
