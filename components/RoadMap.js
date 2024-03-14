@@ -25,22 +25,11 @@ const abouts = [
     content: (
       <ul className="list-disc">
         <li>Adding decentralization features to dApp</li>
-        <li>Support payment using $TAO Token on NetTAO services</li>
+        <li>Support payment using $NTAO Token on NetTAO services</li>
         <li>Expand GPU Servers Phase 01</li>
         <li>Rent AI Nodes</li>
-        <li>AI Trading Tools</li>
         <li>Exploration of new services in Rent Services</li>
         <li>Developing native AI Chat Bot</li>
-        <li>Deploy Ethereum Node to learn basic EVM Bytecode</li>
-        <li>
-          Deploy Polygon Node to learn the basic Polygon CDK in AI development
-          APP Chain used in Net Tensor
-        </li>
-        <li>
-          Deployed a NetTAO Node to learn the basics of decentralized LLM and
-          leveraged the NetTAO API to integrate into the AI App Chain used in
-          NetTAO.
-        </li>
       </ul>
     ),
   },
@@ -52,14 +41,7 @@ const abouts = [
         <li>Expand GPU Servers Phase 02</li>
         <li>Node AI Marketplace</li>
         <li>Mobile App for Monitoring</li>
-        <li>
-          Building AI App Chain compatible with EVM Bytecode based on Polygon
-          CDK
-        </li>
-        <li>
-          Allowing native coins like $TAO to cross the bridge to Net Tensor for
-          developers building dApps on the Net Tensor network
-        </li>
+        <li>CEX listing</li>
         <li>Another part of phase 3 will be added soon</li>
       </ul>
     ),

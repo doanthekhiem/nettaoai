@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useMemo } from "react";
-import ArowRight from "../public/assets/Icon/ArowRight.svg";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
-import ButtonOutline from "./misc/ButtonOutline.";
 import ButtonSecondaryShadow from "./misc/ButtonSecondaryShadow";
 
 const Hero = ({
@@ -11,22 +9,17 @@ const Hero = ({
     {
       name: "Users",
       number: "390",
-      icon: "/assets/near.png",
+      icon: "/assets/Icon/ether.svg",
     },
     {
       name: "Locations",
       number: "20",
-      icon: "/assets/nasen.png",
+      icon: "/assets/Icon/AMD.svg",
     },
     {
       name: "avalanche",
       number: "50",
-      icon: "/assets/avalanche.png",
-    },
-    {
-      name: "Server",
-      number: "502",
-      icon: "/assets/matic.png",
+      icon: "/assets/Icon/nvidia.svg",
     },
   ],
 }) => {
@@ -51,13 +44,9 @@ const Hero = ({
                 projects in decentralized way.
               </p>
               <div className="flex gap-6">
-                <ButtonSecondaryShadow>NetCloudBot</ButtonSecondaryShadow>
-                <ButtonOutline>
-                  <div className="flex justify-center items-center gap-2">
-                    Buy $TAO
-                    <ArowRight />
-                  </div>
-                </ButtonOutline>
+                <ButtonSecondaryShadow addClass={"h-12"}>
+                  Buy $NTAO
+                </ButtonSecondaryShadow>
               </div>
             </div>
           </motion.div>
@@ -70,11 +59,11 @@ const Hero = ({
                 custom={{ duration: 2 + index }}
                 variants={scrollAnimation}
               >
-                <div className="h-7">
+                <div className="h-9">
                   <img
                     src={listUsers.icon}
                     height={28}
-                    className="h-4 sm:h-7 w-auto"
+                    className="h-5 sm:h-9 w-auto"
                   />
                 </div>
               </motion.div>

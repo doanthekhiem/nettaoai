@@ -60,7 +60,7 @@ const ReadyStart = () => {
             <Link href={"/app"}>
               <ButtonOutline className={"border-2 bg-[#FFFFFF1A]"}>
                 <div className="flex justify-center items-center gap-2">
-                  Get Started <ArowRight />
+                  Launch dApp <ArowRight />
                 </div>
               </ButtonOutline>
             </Link>

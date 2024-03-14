@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 body {
   @apply bg-[#0B0C14];
@@ -71,8 +72,8 @@ li.check:before {
   background-position-x: center;
 }
 .bg-head {
-  background-image: url("/assets/bg-111.png");
-  background-size: auto;
+  background-image: url("/assets/bg_3.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
 }
@@ -82,6 +83,15 @@ li.check:before {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6037ff -1%, #b27aff 48.24%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 /* purgecss end ignore */

@@ -8,6 +8,7 @@ import { connect, disconnect } from "@wagmi/core";
 import { mainnet } from "@wagmi/core/chains";
 import { useAccount } from "wagmi";
 import { config } from "./../../config";
+import Link from "next/link";
 
 const HeaderApp = () => {
   const account = useAccount();
@@ -38,7 +39,9 @@ const HeaderApp = () => {
   return (
     <nav class="px-4 py-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
       <div class="flex  flex-wrap justify-between items-center">
-        <LogoVPN className="h-10 w-auto" />
+        <Link href={"/"}>
+          <LogoVPN className="h-10 w-auto cursor-pointer" />
+        </Link>
         {account.address ? (
           <button
             onClick={logout}
