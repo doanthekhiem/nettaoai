@@ -3,7 +3,7 @@ import Cloud from "./../../public/assets/Icon/Cloud.svg";
 import Wmap from "./../../public/assets/Icon/WM.png";
 
 import ButtonPrimary from "../../components/misc/ButtonPrimary";
-import Cpuitem from "./../../public/assets/Icon/cpuitem.png";
+import Cpuitem from "./../../public/assets/3.png";
 import Layout from "./Layout";
 
 export default function Home() {
@@ -28,6 +28,7 @@ export default function Home() {
       full: 1018,
       price: 1.19,
       process: "w-1/4",
+      percent: 25,
     },
     {
       name: "Xeon Gold 6226R 16-Core Processor Intel",
@@ -38,6 +39,7 @@ export default function Home() {
       full: 73,
       price: 1.29,
       process: "w-1/5",
+      percent: 20,
     },
     {
       name: "Xeon Gold 6226R 16-Core Processor Intel",
@@ -48,6 +50,7 @@ export default function Home() {
       full: 157,
       price: 1.0,
       process: "w-1/2",
+      percent: 50,
     },
     {
       name: "Xeon Gold 6226R 16-Core Processor Intel",
@@ -57,7 +60,8 @@ export default function Home() {
       init: 29,
       full: 66,
       price: 1.44,
-      process: "w-2/3",
+      process: "w-0",
+      percent: 0,
     },
     {
       name: "Xeon Gold 6226R 16-Core Processor Intel",
@@ -67,7 +71,8 @@ export default function Home() {
       init: 294,
       full: 172,
       price: 1.92,
-      process: "w-1/3",
+      process: "w-0",
+      percent: 0,
     },
     {
       name: "Xeon Gold 6226R 16-Core Processor Intel",
@@ -78,6 +83,7 @@ export default function Home() {
       full: 1705,
       price: 1.2,
       process: "w-0",
+      percent: 0,
     },
   ];
 
@@ -122,8 +128,8 @@ export default function Home() {
                   <img
                     src={Cpuitem.src}
                     className="mx-auto"
-                    width={80}
-                    height={80}
+                    width={120}
+                    height={120}
                   />
                   <div className="text-[#9DA5AF] text-center mx-auto w-3/4">
                     {feature.name}
@@ -164,7 +170,7 @@ export default function Home() {
                         }}
                       ></div>
                     </div>
-                    <div>0% Used</div>
+                    <div>{feature?.percent}% Used</div>
                   </div>
                   <div className="flex gap-2 items-center justify-between pl-3">
                     <div>{`$${feature.price} per Hour`} </div>

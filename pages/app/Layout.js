@@ -1,10 +1,16 @@
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import React from "react";
+import Discord from "../../public/assets/Icon/discord.svg";
+import Facebook from "../../public/assets/Icon/instar.svg";
 import LiveCpu from "../../public/assets/Icon/liveCPU.svg";
 import LiveCPUAtive from "../../public/assets/Icon/liveCPUAtive.svg";
 import Staking from "../../public/assets/Icon/staking.svg";
-// Import react scroll
-import dynamic from "next/dynamic";
-const HeaderApp = dynamic(() => import('../../components/Layout/HeaderApp'), { ssr: false })
+import Telegram from "../../public/assets/Icon/telegram.svg";
+import Twitter from "../../public/assets/Icon/tweet.svg";
+const HeaderApp = dynamic(() => import("../../components/Layout/HeaderApp"), {
+  ssr: false,
+});
 
 const Layout = ({ children }) => {
   const asideLink = [
@@ -38,7 +44,7 @@ const Layout = ({ children }) => {
           boxShadow: "0px 8px 28px 0px #0105114D",
         }}
       >
-        <div class="overflow-y-auto py-5 px-4 h-full bg-white dark:bg-gray-800">
+        <div class="overflow-y-auto flex flex-col justify-between py-5 px-4 h-full bg-white dark:bg-gray-800">
           <ul class="space-y-2">
             {asideLink?.map((el, index) => (
               <li key={index}>
@@ -61,6 +67,16 @@ const Layout = ({ children }) => {
               </li>
             ))}
           </ul>
+          <div className="flex h-4 gap-3 cursor-pointer">
+            <Facebook />
+            <Link href={"https://twitter.com/NetTaoAI"}>
+              <Twitter />
+            </Link>
+            <Discord />
+            <Link href={"https://t.me/nettaoai"}>
+              <Telegram />
+            </Link>
+          </div>
         </div>
       </aside>
       <main class="p-4 md:ml-64 h-auto pt-20">{children}</main>
