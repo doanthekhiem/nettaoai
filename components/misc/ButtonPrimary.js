@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonPrimary = ({ children, addClass, onClick }) => {
+const ButtonPrimary = ({ children, addClass, onClick, isShadow }) => {
   return (
     <button
       onClick={onClick}
@@ -11,6 +11,7 @@ const ButtonPrimary = ({ children, addClass, onClick }) => {
       style={{
         background:
           "radial-gradient(167.31% 100% at 50.43% 23.61%, #6037FF 0%, #B27AFF 100%)",
+        boxShadow: isShadow ? "0px 4px 20px 0px #5E45FF" : "",
       }}
     >
       {children}

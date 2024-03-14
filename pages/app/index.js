@@ -5,6 +5,7 @@ import Wmap from "./../../public/assets/Icon/WM.png";
 import ButtonPrimary from "../../components/misc/ButtonPrimary";
 import Cpuitem from "./../../public/assets/3.png";
 import Layout from "./Layout";
+import Link from "next/link";
 
 export default function Home() {
   const listGB = [
@@ -174,11 +175,13 @@ export default function Home() {
                   </div>
                   <div className="flex gap-2 items-center justify-between pl-3">
                     <div>{`$${feature.price} per Hour`} </div>
-                    <ButtonPrimary addClass={""}>
-                      <div className="flex justify-center items-center gap-2">
-                        Rent now
-                      </div>
-                    </ButtonPrimary>
+                    <Link href={"https://n6wkyrfoj68.typeform.com/to/Y5PsNzDF"}>
+                      <ButtonPrimary>
+                        <div className="flex justify-center items-center gap-2">
+                          Rent now
+                        </div>
+                      </ButtonPrimary>
+                    </Link>
                   </div>
                 </motion.div>
               ))}
