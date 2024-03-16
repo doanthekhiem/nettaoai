@@ -2,13 +2,16 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { cookieToInitialState } from "wagmi";
+import Web3ModalProvider from "../../components/wallet/Web3ModalProvider";
 import Discord from "../../public/assets/Icon/discord.svg";
-import Facebook from "../../public/assets/Icon/instar.svg";
 import LiveCpu from "../../public/assets/Icon/liveCPU.svg";
 import LiveCPUAtive from "../../public/assets/Icon/liveCPUAtive.svg";
 import Staking from "../../public/assets/Icon/staking.svg";
 import Telegram from "../../public/assets/Icon/telegram.svg";
 import Twitter from "../../public/assets/Icon/tweet.svg";
+
+import { config } from "../../config";
 const HeaderApp = dynamic(() => import("../../components/Layout/HeaderApp"), {
   ssr: false,
 });
@@ -33,7 +36,7 @@ export const asideLink = [
   },
 ];
 
-const Layout = ({ children }) => {
+const Layout = ({ children, initialState }) => {
   const router = useRouter();
   return (
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
@@ -99,10 +102,25 @@ const Layout = ({ children }) => {
             </Link>
           </div>
         </div>
-        {children}
+        <Web3ModalProvider initialState={initialState}>
+          {children}
+        </Web3ModalProvider>
       </main>
     </div>
   );
 };
 
 export default Layout;
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const cookies = req.headers.cookie;
+
+  const initialState = cookieToInitialState(config, cookies);
+
+  return {
+    props: {
+      initialState,
+    },
+  };
+}

@@ -18,6 +18,11 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/wallet/Web3ModalProvider.tsx"
+  ],
   "exclude": ["node_modules"]
 }
