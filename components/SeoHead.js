@@ -12,7 +12,8 @@ const defaultMeta = {
   robots: "follow, index",
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status
-  image: "https://nettao.ai",
+  image:
+    "https://opengraph.b-cdn.net/production/documents/d3f8a2f5-dcd3-4522-99eb-cc0fa80138eb.png?token=Gjv0lLivgqKZOAiKp8I22GiY02d9JyhdZi6xv1ee5Wk&height=400&width=1200&expires=33246574591",
   author: "david",
 };
 
