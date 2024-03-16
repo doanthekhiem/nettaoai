@@ -48,12 +48,6 @@ const AboutFeature = () => {
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-[#BDFFE8] leading-normal">
               Our Features
             </h1>
-            <p className="text-white-300 mt-4 mb-6">
-              Nettensor is an AI Infrastructure service provider that emphasizes
-              ease of access and other additional features such as Privacy
-              Service and App Chain which are our best products in blockchain
-              and decentralized industry.
-            </p>
           </motion.div>
         </ScrollAnimationWrapper>
         <ScrollAnimationWrapper>
