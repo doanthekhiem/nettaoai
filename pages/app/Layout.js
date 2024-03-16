@@ -10,6 +10,7 @@ import LiveCPUAtive from "../../public/assets/Icon/liveCPUAtive.svg";
 import Staking from "../../public/assets/Icon/staking.svg";
 import Telegram from "../../public/assets/Icon/telegram.svg";
 import Twitter from "../../public/assets/Icon/tweet.svg";
+import SeoHead from "../../components/SeoHead";
 
 import { config } from "../../config";
 const HeaderApp = dynamic(() => import("../../components/Layout/HeaderApp"), {
@@ -40,6 +41,7 @@ const Layout = ({ children, initialState }) => {
   const router = useRouter();
   return (
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
+      <SeoHead title="NetTao DApp" />
       <HeaderApp />
       <aside
         class="fixed top-0 bg-[#6A53FF29] left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
