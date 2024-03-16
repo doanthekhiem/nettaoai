@@ -28,7 +28,7 @@ const Hero = ({
   return (
     <div className="bg-head">
       <div
-        className="max-w-screen-md sm:pt-72 pt-10  px-8 xl:px-16 mx-auto"
+        className="max-w-screen-md sm:pt-56 sm:pb-20 pt-10  px-8 xl:px-16 mx-auto"
         id="about"
       >
         <ScrollAnimationWrapper>

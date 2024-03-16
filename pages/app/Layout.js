@@ -13,27 +13,28 @@ const HeaderApp = dynamic(() => import("../../components/Layout/HeaderApp"), {
   ssr: false,
 });
 
+export const asideLink = [
+  {
+    name: "Live GPU",
+    url: "/app",
+    icon: LiveCpu,
+    iscom: false,
+  },
+  {
+    name: "Leaderboard",
+    url: "",
+    icon: LiveCPUAtive,
+    iscom: true,
+  },
+  {
+    name: "Staking",
+    url: "/app/staking",
+    icon: Staking,
+  },
+];
+
 const Layout = ({ children }) => {
   const router = useRouter();
-  const asideLink = [
-    {
-      name: "Live GPU",
-      url: "/app",
-      icon: LiveCpu,
-      iscom: false,
-    },
-    {
-      name: "Leaderboard",
-      url: "roadmap",
-      icon: LiveCPUAtive,
-      iscom: true,
-    },
-    {
-      name: "Staking",
-      url: "/app/staking",
-      icon: Staking,
-    },
-  ];
   return (
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
       <HeaderApp />
@@ -72,18 +73,34 @@ const Layout = ({ children }) => {
             })}
           </ul>
           <div className="flex h-4 gap-3 cursor-pointer">
-            <Facebook />
-            <Link href={"https://twitter.com/NetTaoAI"}>
+            <Link href={"https://twitter.com/NetTaoAI"} target="_blank">
               <Twitter />
             </Link>
-            <Discord />
-            <Link href={"https://t.me/nettaoai"}>
+            <Link href={"https://t.me/nettaoai"} target="_blank">
               <Telegram />
+            </Link>
+            <Link href={"https://docs.nettao.ai"} target="_blank">
+              <Discord />
             </Link>
           </div>
         </div>
       </aside>
-      <main class="p-4 md:ml-64 h-auto pt-20">{children}</main>
+      <main class="p-4 md:ml-64 h-auto py-20">
+        <div className="text-white-300 block pb-10 sm:hidden">
+          <div className="flex h-4 gap-3 cursor-pointer">
+            <Link href={"https://twitter.com/NetTaoAI"} target="_blank">
+              <Twitter />
+            </Link>
+            <Link href={"https://t.me/nettaoai"} target="_blank">
+              <Telegram />
+            </Link>
+            <Link href={"https://docs.nettao.ai"} target="_blank">
+              <Discord />
+            </Link>
+          </div>
+        </div>
+        {children}
+      </main>
     </div>
   );
 };

@@ -11,13 +11,14 @@ const Footer = () => {
     <div className="pt-44 px-8 pb-6 flex sm:flex-row flex-col items-end justify-between">
       <div className="flex flex-col gap-6">
         <div className="flex h-6 gap-6 cursor-pointer">
-          <Facebook />
           <Link href={"https://twitter.com/NetTaoAI"}>
             <Twitter />
           </Link>
-          <Discord />
           <Link href={"https://t.me/nettaoai"}>
             <Telegram />
+          </Link>
+          <Link href={"https://docs.nettao.ai"} target="_blank">
+            <Discord />
           </Link>
         </div>
         <div className="text-white-300 font-normal text-[14px]">
