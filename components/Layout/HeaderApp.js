@@ -47,7 +47,7 @@ const HeaderApp = () => {
           <button
             onClick={logout}
             className={
-              "font-medium flex items-center gap-2 text-[14px] tracking-wide py-[8px] px-4 sm:px-8 border border-seconday text-white-300  outline-none rounded-l-full rounded-r-full capitalize  hover:text-white-500 transition-all hover:shadow-seconday "
+              "font-medium bg-black-600 flex items-center gap-2 text-[14px] tracking-wide py-[8px] px-4 sm:px-8 border border-seconday text-white-300  outline-none rounded-l-full rounded-r-full capitalize  hover:text-white-500 transition-all hover:shadow-seconday "
             }
           >
             {shortenAddress(account?.address)} <ArowRight />
