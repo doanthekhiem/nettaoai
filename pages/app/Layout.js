@@ -34,6 +34,7 @@ export const asideLink = [
     name: "Staking",
     url: "/app/staking",
     icon: Staking,
+    iscom: true,
   },
 ];
 
@@ -57,9 +58,13 @@ const Layout = ({ children, initialState }) => {
               const isActive = el.url == router.pathname;
               return (
                 <li key={index}>
-                  <a
-                    href={el.url}
-                    class={`flex border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
+                  <div
+                    onClick={() => {
+                      if (!el?.iscom) {
+                        router.push(el.url);
+                      }
+                    }}
+                    class={`flex cursor-pointer border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
                       isActive && "bg-[#2D285E] text-primary"
                     }`}
                   >
@@ -67,12 +72,12 @@ const Layout = ({ children, initialState }) => {
                     <div class="ml-3 flex gap-2 items-center">
                       {el?.name}{" "}
                       {el.iscom && (
-                        <span className="text-[10px] font-thin text-primary">
-                          (comming)
+                        <span className="text-[10px] font-thin text-white-300">
+                          (Coming soon)
                         </span>
                       )}
                     </div>
-                  </a>
+                  </div>
                 </li>
               );
             })}

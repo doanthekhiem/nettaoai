@@ -35,9 +35,13 @@ const HeaderApp = () => {
             const isActive = el.url == router.pathname;
             return (
               <li key={index} className="flex-1">
-                <a
-                  href={el.url}
-                  class={`flex border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
+                <div
+                  onClick={() => {
+                    if (!el?.iscom) {
+                      router.push(el.url);
+                    }
+                  }}
+                  class={`flex cursor-pointer border border-[#6A53FF66] h-11 rounded-lg items-center p-2 px-4 text-white-300 font-normal bg-[#0B0C14] text-[14px]  dark:text-white hover:bg-gray-500 dark:hover:bg-gray-700 group ${
                     isActive && "!bg-gradient-bt text-primary"
                   }`}
                   style={{
@@ -47,7 +51,7 @@ const HeaderApp = () => {
                   }}
                 >
                   <el.icon />
-                </a>
+                </div>
               </li>
             );
           })}
